@@ -118,7 +118,7 @@ const questions = [
     },
     {
         type: 'checkbox',
-        input: 'languages',
+        name: 'languages',
         message: 'What did you build this project with? (Check all that apply)',
         choices: ['HTML', 'CSS', 'Javascript', 'Node', 'jQuery', 'Other',],
     },
@@ -135,8 +135,8 @@ const questions = [
     },
     {
         type: 'input',
-        input: 'testing',
-        message: 'Enter the commands to test the application:',
+        name: 'testing',
+        message: 'Please enter the commands to test the application:',
         when: ({confirmTesting}) => {
             if (confirmTesting) {
                 return true;
@@ -148,7 +148,7 @@ const questions = [
     },
     {
         type: 'list',
-        input: 'license',
+        name: 'license',
         message: 'Please select the license(s) associated with this project. ',
         choices: ['MIT', 'Apache', 'Boost', 'Eclipse', 'Mozilla', 'IBM', 'None']
     },
@@ -169,12 +169,14 @@ init()
 })
 .then(generateResponse => {
     console.log('You successfully created created your README. Check it out!')
-    return writeToFile('./README.md', generateResponse);
+    return writeToFile('./utils/README.md', generateResponse);
 });
 // function to write README file
 function writeToFile(fileName, data) {
     console.log("README Generating...")
     fs.writeFile(fileName, data, err => {
-        if (err) console.log(err)
+        if (err) {console.log(err);
+        return;
+        }
     })
 }
