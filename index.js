@@ -1,15 +1,9 @@
-const inquire = require('inquire');
+const inquirer = require('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
 const { title } = require('process');
 
-// function to write README file
-function writeToFile(fileName, data) {
-    console.log("README Generating...")
-    fs.writeFile(fileName, data, err => {
-        if (err) console.log(err)
-    })
-}
+
 // array of questions for user
 const questions = [
 
@@ -69,7 +63,7 @@ const questions = [
         type: 'confirm',
         name: 'confirmAbout',
         message: 'Would you like to enter information about yourself to be added to an "About" section?',
-        defatult: true  
+        default: true  
     },
     {
         type: 'input',
@@ -111,18 +105,17 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'usage',
+        name: 'use',
         message: 'Please provide instructions on how to use this project. (Required)',
-        validate: usageInput => {
-            if (usageInput) {
+        validate: (confirmUse) => {
+            if (confirmUse) {
                 return true;
-            } else {
-                console.log('Please provide usage instructions');
+            } else { 
+                console.log('Please enter intructions.')
                 return false;
             }
         }
     },
-    
     {
         type: 'checkbox',
         input: 'languages',
@@ -138,7 +131,7 @@ const questions = [
         type: 'confirm',
         name: 'confirmTesting',
         message: 'Would you like to enter information about testing to be added to a "Tests" section?',
-        defatult: true  
+        default: true  
     },
     {
         type: 'input',
@@ -166,7 +159,7 @@ const questions = [
 
 // function to initialize program
 const init = () => {
-    return inquire.prompt(questions);
+    return inquirer.prompt(questions);
 };
 
 // function call to initialize program
@@ -178,3 +171,10 @@ init()
     console.log('You successfully created created your README. Check it out!')
     return writeToFile('./README.md', generateResponse);
 });
+// function to write README file
+function writeToFile(fileName, data) {
+    console.log("README Generating...")
+    fs.writeFile(fileName, data, err => {
+        if (err) console.log(err)
+    })
+}
