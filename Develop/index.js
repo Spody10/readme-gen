@@ -1,7 +1,7 @@
 const inquire = require('inquire');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const fs = require('fs');
-
+const { title } = require('process');
 
 // function to write README file
 function writeToFile(fileName, data) {
