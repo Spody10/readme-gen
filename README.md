@@ -4,6 +4,8 @@
 
 Allows user to enter information to quickly generate a professional README file.
 
+Video walkthrough:
+
 ## Deployed
 
 ### Website
@@ -26,7 +28,7 @@ https://github.com/Spody10/readme-gen
 
 ## Usage
 
-See here:
+As a developer I want a README generator so that I can quickly create a professional README for a new project.
 
 ## Installation
 
@@ -38,7 +40,7 @@ See here:
 
 ## Contributions
 
-Billy, Bob
+Andrew, Jared
 
 ## License
 
@@ -48,10 +50,12 @@ For information on licenses, click on the badge icons.
 
 ## Questions
 
-Hello, my nam is Michael. If you have any questions about this project, or any other repositories of mine at (Spody10), feel free to write me at michaelpspore@gmail.com. Thanks!
+Hello, my name is Michael Spore. If you have any questions about this project, or any other repositories of mine at (Spody10), feel free to write me at michaelpspore@gmail.com. Thanks!
 
 ## About
 
 Struggling coder just trying to make a living (eventually).
 
 ## Tests
+
+Follow these instructions for testing: Answer prompts and required fields which are necessary to run.

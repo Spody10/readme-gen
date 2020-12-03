@@ -48,6 +48,7 @@ const generateTestSect = testingInput => {
   }
   return `
   ## Tests
+  Follow these instructions for testing: ${testingInput}
   `;
 }
 
@@ -96,7 +97,7 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  Hello, my nam is ${data.name}. If you have any questions about this project, or any other repositories of mine at (${data.github}), feel free to write me at ${data.email}. Thanks!
+  Hello, my name is ${data.name}. If you have any questions about this project, or any other repositories of mine at (${data.github}), feel free to write me at ${data.email}. Thanks!
 
   ${generateAboutSect (data.about)}
 

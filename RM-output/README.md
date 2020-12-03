@@ -20,7 +20,7 @@
   - [Tests](#tests)
 
   ## Usage
-  See here:
+  As a developer I want a README generator so that I can quickly create a professional README for a new project.
 
   ## Installation
 
@@ -32,7 +32,7 @@
 
   ## Contributions
 
-  Billy, Bob
+  Andrew, Jared
   
   ## License
 
@@ -43,7 +43,7 @@
 
   ## Questions
 
-  Hello, my nam is Michael. If you have any questions about this project, or any other repositories of mine at (Spody10), feel free to write me at michaelpspore@gmail.com. Thanks!
+  Hello, my name is Michael Spore. If you have any questions about this project, or any other repositories of mine at (Spody10), feel free to write me at michaelpspore@gmail.com. Thanks!
 
   
   ## About 
@@ -52,5 +52,6 @@
 
   
   ## Tests
+  Follow these instructions for testing: Answer prompts and required fields which are necessary to run.
   
 
