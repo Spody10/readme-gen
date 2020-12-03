@@ -42,6 +42,14 @@ const generateAboutSect = aboutInput => {
   ${aboutInput}
   `;
 };
+const generateTestSect = testingInput => {
+  if (!testingInput) {
+    return '';
+  }
+  return `
+  ## Tests
+  `;
+}
 
 // function to generate markdown for README
 function generateMarkdown(data) {
@@ -50,7 +58,10 @@ function generateMarkdown(data) {
   ## Description
   ${data.description}
 
-  ## Deployed Application
+  ## Deployed
+  ### Website
+  ${data.website}
+  ### Repository
   ${data.repository} 
 
   ### Table of Contents
@@ -71,7 +82,7 @@ function generateMarkdown(data) {
   * Open in your text editor (Visual Studio, etc.)
   * Run "npm init" from the command line of editor, making sure the file path is in the root of the project directory. Follow prompts from .json package.
   * Next, run "npm install inquirer" from the command line. This will install the "inquirer" package into a node_modules folder.
-  * Finally, to run the program, type "node index" on the command line..
+  * Finally, to run the program, type "node index" on the command line.
 
   ## Contributions
 
@@ -85,13 +96,11 @@ function generateMarkdown(data) {
 
   ## Questions
 
-  If you have any questions about this project, my name is ${data.name}, and feel free to write me at ${data.email}. Thanks!
+  Hello, my nam is ${data.name}. If you have any questions about this project, or any other repositories of mine at (${data.github}), feel free to write me at ${data.email}. Thanks!
 
   ${generateAboutSect (data.about)}
 
-  ## Test
-
-  * Follow prompts and required fields which are neccesary to to run.
+  ${generateTestSect (data.testing)}
 
 `;
 };

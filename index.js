@@ -6,7 +6,7 @@ const { title } = require('process');
 
 // array of questions for user
 const questions = [
-
+    
     {
         type: 'input',
         name: 'name',
@@ -28,7 +28,7 @@ const questions = [
             if (emailInput) {
                 return true;
             } else {
-                console.log('');
+                console.log('Please provide your email.');
                 return false;
             }
         }
@@ -42,6 +42,19 @@ const questions = [
                 return true;
             } else {
                 console.log('Please enter your GitHub username.');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'website',
+        message: 'Please provide a link to your published website: (Required)',
+        validate: websiteInput => {
+            if (websiteInput) {
+                return true;
+            } else {
+                console.log('Please provide your published website link!');
                 return false;
             }
         }
@@ -106,7 +119,7 @@ const questions = [
     {
         type: 'input',
         name: 'use',
-        message: 'Please provide instructions on how to use this project. (Required)',
+        message: 'Please provide information on how to use this project. (Required)',
         validate: (confirmUse) => {
             if (confirmUse) {
                 return true;
@@ -168,8 +181,8 @@ init()
     return generateMarkdown(rmData);
 })
 .then(generateResponse => {
-    console.log('You successfully created created your README. Check it out!')
-    return writeToFile('./utils/README.md', generateResponse);
+    console.log('You successfully created created your README. Check it out in the RM-output folder!')
+    return writeToFile('./RM-output/README.md', generateResponse);
 });
 // function to write README file
 function writeToFile(fileName, data) {
