@@ -32,7 +32,7 @@
 
   ## Contributions
 
-  Andrew, Jared
+  N/A, Michael Smith
   
   ## License
 

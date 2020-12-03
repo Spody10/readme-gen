@@ -4,7 +4,7 @@
 
 Allows user to enter information to quickly generate a professional README file.
 
-Video walkthrough:
+Video walkthrough: https://drive.google.com/file/d/1VccYEZP-DtU6wQKMvzmjaFbl2mNGoUqC/view
 
 ## Deployed
 
